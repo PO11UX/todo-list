@@ -65,6 +65,7 @@ body{
         .task{
             display: flex;
             justify-content: space-between;
+           
         }
         .list{
             margin: 0;
@@ -79,13 +80,35 @@ body{
         }
         
     }
-}
-.delete{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    cursor: pointer;
+    .btns{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .delete{
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    .title{
+        font-size: 25px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        padding: 5px;
+    }
+    .undo{
+        display: flex;
+        background: none;
+        outline: none;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        // width: 25px;
+        // height: 22px;
+        cursor: pointer;
+    }
 }

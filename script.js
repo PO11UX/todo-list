@@ -56,8 +56,11 @@ add.addEventListener('click',function(){
 
     taskHTML = `
     <div class='task'>
-    <span data-id='${id}' onclick='check(event)' >${input.value}</span>
-    <button onclick='del(event)' class="delete"><img  data-id='${id}' src='https://img.icons8.com/flat_round/20/000000/delete-sign.png'></button>
+    <span class='tsk' data-id='${id}' onclick='check(event)' >${input.value}</span>
+    <div class='btns'>
+        <button onclick='undo(event)' class="undo"><img data-id='${id}' src="https://img.icons8.com/windows/22/000000/undo-alt.png"/>
+        <button onclick='del(event)' class="delete"><img  data-id='${id}' src='https://img.icons8.com/flat_round/20/000000/delete-sign.png'></button>
+    </div>
     </div>
     `
     // task.innerHTML = taskHTML;
@@ -66,6 +69,17 @@ add.addEventListener('click',function(){
     updateList();
     input.value='';
 })
+function undo(e){
+    for (let i = 0; i < arr.length; i++) {
+        //tasks.done=true;
+        if (e.target.dataset.id == arr[i].id) {
+            console.log('data id');
+            arr[i].done = false;
+        }
+    }
+    updateList();
+
+}
 function updateList(){
 
     list.innerHTML = '';
@@ -85,9 +99,11 @@ function updateList(){
     }
 }
 function crateObject(){
-    tasks={tasks:taskHTML,done:false,name:input.value,id:id};
-    arr.push(tasks);
-    console.log(arr);
-    remove.dataset.id = id;
-    id++;
+    if(input.value !==''){
+        tasks={tasks:taskHTML,done:false,name:input.value,id:id};
+        arr.push(tasks);
+        console.log(arr);
+        remove.dataset.id = id;
+        id++;
+    }
 }

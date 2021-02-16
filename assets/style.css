@@ -97,7 +97,20 @@ body {
   font-size: 20px;
 }
 
-.delete {
+.app .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .delete {
+  outline: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,6 +123,28 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 100%;
+  cursor: pointer;
+}
+
+.app .title {
+  font-size: 25px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  padding: 5px;
+}
+
+.app .undo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+  outline: none;
+  border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
