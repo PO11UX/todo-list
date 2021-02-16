@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-size: cover;
+  background-position: top center;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.6)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
+
+.app .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 15px 15px;
+}
+
+.app .header input {
+  width: 100%;
+  max-width: 380px;
+  height: 55px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 16px 0px 0px 16px;
+  border-bottom: 3px solid #DF8E00;
+  color: #313131;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.app .header .add-btn {
+  border-radius: 0px 16px 16px 0px;
+  width: 100%;
+  max-width: 50px;
+  padding: 15px 5px;
+  border: none;
+  outline: none;
+  color: #313131;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid #DF8E00;
+  cursor: pointer;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.app .body {
+  width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 5px grey;
+          box-shadow: 10px 10px 5px grey;
+  padding: 15px;
+  border-bottom: 2px solid #DF8E00;
+}
+
+.app .body .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.app .body .list {
+  margin: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.app .body .checked {
+  margin: 0;
+  font-size: 20px;
+}
+
+.delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
