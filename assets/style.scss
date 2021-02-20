@@ -65,6 +65,13 @@ body{
         .task{
             display: flex;
             justify-content: space-between;
+            .tsk{
+                border: none;
+                outline: none;
+                color: #313131;
+                font-size: 16px;
+                background-color:rgba(255,255,255,0.3);
+            }
            
         }
         .list{
@@ -81,6 +88,7 @@ body{
         
     }
     .btns{
+        width: 75px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -94,6 +102,16 @@ body{
         height: 20px;
         border-radius: 100%;
         cursor: pointer;
+    }
+    .done{
+        display: flex;
+        background: none;
+        outline: none;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    
     }
     .title{
         font-size: 25px;
@@ -111,6 +129,18 @@ body{
         // height: 22px;
         cursor: pointer;
     }
+    .edit{
+        display: flex;
+        background: none;
+        outline: none;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    // .editText{
+        
+    // }
     @media only screen and (max-width:1000px){
         .body{
             width: 400px;

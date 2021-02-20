@@ -4,6 +4,7 @@ let list =document.getElementById('list');
 let checked = document.getElementById('checked');
 let b =document.getElementById('remove');
 let checkbox = document.getElementById('checkbox');
+let editTxt = document.getElementsByClassName('.tsk');
 let id = 0;
 var arr=[];
 var div;
@@ -27,19 +28,21 @@ function del(e){
     updateList();
 }
 
-function check (e){
+function check(e){
     // console.log(e.target)
-    
+
     //checked.appendChild(div);
     // check = true;
     for (let i = 0; i < arr.length; i++) {
         //tasks.done=true;
         if (e.target.dataset.id == arr[i].id) {
-            console.log('data id');
             arr[i].done = true;
         }
     }
     updateList();
+    
+   
+    
 }
 
 let taskHTML;
@@ -53,12 +56,13 @@ add.addEventListener('click',function(){
     // div.appendChild(paragraph);
     // div.appendChild(remove);
     // list.appendChild(div);
-
     taskHTML = `
     <div class='task'>
-    <span class='tsk' data-id='${id}' onclick='check(event)' >${input.value}</span>
+    <input class='tsk'value=${input.value}>
     <div class='btns'>
-        <button onclick='undo(event)' class="undo"><img data-id='${id}' src="https://img.icons8.com/windows/22/000000/undo-alt.png"/>
+        
+    <button class='done' onclick=check(event)><img data-id='${id}' src="https://img.icons8.com/ios/22/000000/ok.png"/></button>
+        <button onclick='undo(event)' class="undo"><img data-id='${id}' src="https://img.icons8.com/windows/22/000000/undo-alt.png"/></button>
         <button onclick='del(event)' class="delete"><img  data-id='${id}' src='https://img.icons8.com/flat_round/20/000000/delete-sign.png'></button>
     </div>
     </div>
@@ -67,6 +71,7 @@ add.addEventListener('click',function(){
     
     crateObject();
     updateList();
+  
     input.value='';
 })
 function undo(e){
@@ -80,6 +85,18 @@ function undo(e){
     updateList();
 
 }
+// function edit(e){
+//     for (let i = 0; i < arr.length; i++) {
+//         //tasks.done=true;
+//         if (e.target.dataset.id == arr[i].id) {
+//             if(editTxt.value !==''){
+//                 updatetask();
+//             }
+//         }
+//     }
+//     updateList();
+
+// }
 function updateList(){
 
     list.innerHTML = '';
@@ -92,8 +109,12 @@ function updateList(){
 
         if(arr[i].done){
             task.style.textDecoration = "line-through";
+           
             checked.appendChild(task);
+            
+            
         }else{
+          
             list.appendChild(task);
         }
     }
@@ -107,3 +128,11 @@ function crateObject(){
         id++;
     }
 }
+// function updatetask(){
+//     tasks={name:editTxt.value};
+//         arr.push(tasks);
+//         // console.log(arr);
+//         // remove.dataset.id = id;
+//         // id++;
+   
+// }

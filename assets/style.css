@@ -86,6 +86,14 @@ body {
           justify-content: space-between;
 }
 
+.app .body .task .tsk {
+  border: none;
+  outline: none;
+  color: #313131;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .app .body .list {
   margin: 0;
   cursor: pointer;
@@ -98,6 +106,7 @@ body {
 }
 
 .app .btns {
+  width: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,6 +135,22 @@ body {
   cursor: pointer;
 }
 
+.app .done {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+  outline: none;
+  border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
 .app .title {
   font-size: 25px;
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -133,6 +158,22 @@ body {
 }
 
 .app .undo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+  outline: none;
+  border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.app .edit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
